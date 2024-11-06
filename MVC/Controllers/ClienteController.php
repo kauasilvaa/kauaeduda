@@ -1,58 +1,34 @@
 <?php
-require_once 'MVC/Models/Clientemodels.php';
+require_once 'MVC/Models/ClienteModel.php';
 
-class ClienteController
-{
+class ClienteController {
     private $clienteModel;
 
-    public function __construct()
-    {
+    public function __construct() {
         $this->clienteModel = new Cliente();
     }
 
-    public function criarCliente($nome, $cpf, $data_nascimento)
-    {
+    public function criarCliente($nome, $cpf, $data_nascimento) {
+        if (empty($nome) || empty($cpf) || empty($data_nascimento)) {
+            return "Todos os campos devem ser preenchidos!";
+        }
+
         $resultado = $this->clienteModel->criarCliente($nome, $cpf, $data_nascimento);
-
-        if ($resultado > 0) {
-            echo "Cliente cadastrado com sucesso!";
-        } else {
-            echo "Erro ao cadastrar cliente.";
-        }
+        return $resultado ? "Cliente cadastrado com sucesso!" : "Erro ao cadastrar cliente.";
     }
 
-    public function listarClientes()
-    {
-        $clientes = $this->clienteModel->listarTodos();
-
-        if (!empty($clientes)) {
-            return $clientes;
-        } else {
-            echo "Nenhum cliente encontrado.";
-            return [];
-        }
+    public function listarClientes() {
+        return $this->clienteModel->listarClientes();
     }
 
-    public function atualizarCliente($id, $nome, $cpf, $data_nascimento)
-    {
+    public function atualizarCliente($id, $nome, $cpf, $data_nascimento) {
         $resultado = $this->clienteModel->atualizarCliente($id, $nome, $cpf, $data_nascimento);
-
-        if ($resultado > 0) {
-            echo "Cliente atualizado com sucesso!";
-        } else {
-            echo "Erro ao atualizar cliente ou nenhum dado foi alterado.";
-        }
+        return $resultado ? "Cliente atualizado com sucesso!" : "Erro ao atualizar cliente.";
     }
 
-    public function deletarCliente($id)
-    {
+    public function deletarCliente($id) {
         $resultado = $this->clienteModel->deletarCliente($id);
-
-        if ($resultado > 0) {
-            echo "Cliente deletado com sucesso!";
-        } else {
-            echo "Erro ao deletar cliente.";
-        }
+        return $resultado ? "Cliente deletado com sucesso!" : "Erro ao deletar cliente.";
     }
 }
 ?>

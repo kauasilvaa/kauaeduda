@@ -4,7 +4,7 @@ require_once 'db.php';
 
 class Financeiro {
     private $conn;
-    private $table_name = "financeiros"; // Alteração do nome da tabela
+    private $table_name = "financeiro"; // Alteração do nome da tabela
 
     public function __construct() {
         $database = new Database();

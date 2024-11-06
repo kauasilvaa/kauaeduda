@@ -1,18 +1,14 @@
 <?php
 require_once 'MVC/Controllers/ClienteController.php';
 
-$clienteController = new ClienteController();
-
-// Processa o formulário de cadastro
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nome = $_POST['nome'];
     $cpf = $_POST['cpf'];
     $data_nascimento = $_POST['data_nascimento'];
 
-    // Chama a função para criar o cliente
-    $clienteController->criarCliente($nome, $cpf, $data_nascimento);
+    $clienteController = new ClienteController();
+    echo $clienteController->criarCliente($nome, $cpf, $data_nascimento);
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -37,6 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <input type="submit" value="Cadastrar">
     </form>
+    <a href="listar_clientes.php">Ver Lista de Clientes</a>
 </div>
 </body>
 </html>
