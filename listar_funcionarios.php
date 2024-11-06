@@ -10,7 +10,7 @@ $funcionarios = $funcionarioController->listarFuncionarios();
 <head>
     <meta charset="UTF-8">
     <title>Lista de Funcionários</title>
-    <link rel="stylesheet" href="style.css"> <!-- Altere o caminho conforme necessário -->
+    <link rel="stylesheet" href="style.css"> <!-- Altere o caminho conforme necessárioo -->
 </head>
 <body>
     <h2>Lista de Funcionários</h2>
