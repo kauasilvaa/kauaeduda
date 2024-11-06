@@ -25,7 +25,11 @@
     <a href="processos.php"><button>Cadastrar Processo</button></a>
 
     <!-- Botão para listar processos -->
-    <a href="processos.php"><button>Ver Lista de Processos</button></a>
+    <a href="listar_processos.php"><button>Ver Lista de Processos</button></a>
+
+    <div>
+        <button onclick="window.location.href='listagens.php'">Ver Listagens de Cadastros</button>
+    </div>
     
     <!-- Outros botões conforme necessário -->
 </body>
