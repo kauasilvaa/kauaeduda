@@ -1,7 +1,7 @@
 <?php
 require_once '../../Controllers/FornecedorController.php';
 
-$fornecedorController = new FornecedorController();
+$fornecedorController = new FornecedorController($fornecedorModel);
 $fornecedores = $fornecedorController->listarFornecedores();
 ?>
 

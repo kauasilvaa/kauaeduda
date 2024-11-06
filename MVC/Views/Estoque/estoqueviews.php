@@ -2,7 +2,7 @@
 require_once '../../Controllers/EstoqueController.php';
 
 $estoqueController = new EstoqueController();
-$produtos = $estoqueController->listarProdutos();
+$produtos = $estoqueModel->listarProdutos();
 ?>
 
 <!DOCTYPE html>
