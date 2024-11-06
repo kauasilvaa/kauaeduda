@@ -1,7 +1,7 @@
 <?php
 include 'db.php';
 
-// Funções para buscar dados de cada tabelaaa
+// Funções para buscar dados de cada tabelaaaa
 function getClientes($pdo) {
     $query = "SELECT * FROM clientes";
     $stmt = $pdo->prepare($query);
