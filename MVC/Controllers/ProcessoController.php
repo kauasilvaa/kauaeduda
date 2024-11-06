@@ -1,5 +1,5 @@
 <?php
-require_once '../Models/Processo.php';
+require_once 'MVC/Models/Processomodels.php';
 
 class ProcessoController {
     private $processoModel;

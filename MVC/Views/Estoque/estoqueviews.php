@@ -1,8 +1,10 @@
 <?php
-require_once '../../Controllers/EstoqueController.php';
+require_once 'MVC/Controllers/EstoqueController.php';
+require_once 'MVC/Models/Estoquemodel.php';
 
-$estoqueController = new EstoqueController();
-$produtos = $estoqueModel->listarProdutos();
+$estoqueModel = new Estoque();
+$estoqueController = new EstoqueController($estoqueModel);
+$produtos = $estoqueController->listarProdutos();
 ?>
 
 <!DOCTYPE html>

@@ -1,3 +1,28 @@
+<?php
+require_once 'MVC/Controllers/FornecedorController.php';
+require_once 'MVC/Models/Fornecedormodels.php';
+
+$fornecedorModel = new Fornecedor();
+$fornecedorController = new FornecedorController($fornecedorModel);
+
+// Processa o formulário de cadastro
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $nome = $_POST['nome'];
+    $telefone = $_POST['telefone'];
+    $email = $_POST['email'];
+    $cnpj = $_POST['cnpj'];
+
+    // Chama a função para criar o fornecedor
+    $resultado = $fornecedorController->criarFornecedor($nome, $telefone, $email, $cnpj);
+
+    if ($resultado > 0) {
+        echo "Fornecedor cadastrado com sucesso!";
+    } else {
+        echo "Erro ao cadastrar fornecedor.";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -16,7 +41,7 @@
         <input type="text" name="telefone" required>
 
         <label>Email:</label>
-        <input type="text" name="email" required>
+        <input type="email" name="email" required>
 
         <label>CNPJ:</label>
         <input type="text" name="cnpj" required>

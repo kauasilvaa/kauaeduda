@@ -1,3 +1,17 @@
+<?php
+require_once 'MVC/Controllers/FuncionarioController.php';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $nome_completo = $_POST['nome_completo'];
+    $cargo = $_POST['cargo'];
+    $email = $_POST['email'];
+    $telefone = $_POST['telefone'];
+
+    $funcionarioController = new FuncionarioController();
+    echo $funcionarioController->criarFuncionario($nome_completo, $cargo, $email, $telefone);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

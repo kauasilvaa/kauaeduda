@@ -9,6 +9,7 @@ class Fornecedor {
         $database = new Database();
         $this->conn = $database->getConnection();
     }
+
     public function criarFornecedor($nome, $telefone, $email, $cnpj)
     {
         $sql = "INSERT INTO fornecedores (nome, telefone, email, cnpj) VALUES (?, ?, ?, ?)";
@@ -18,9 +19,9 @@ class Fornecedor {
         return $stmt->rowCount();
     }
 
-    public function listarFornecedores()
+    public function listarTodos()
     {
-        $sql = "SELECT * FROM fornecedores";
+        $sql = "SELECT * FROM " . $this->table_name;
         $stmt = $this->conn->query($sql);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
@@ -42,11 +43,5 @@ class Fornecedor {
 
         return $stmt->rowCount();
     }
-
-    public function listarTodos() {
-        $query = "SELECT * FROM " . $this->table_name;
-        $stmt = $this->conn->prepare($query);
-        $stmt->execute();
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
-    }
 }
+?>

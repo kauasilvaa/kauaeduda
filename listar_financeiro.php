@@ -2,26 +2,20 @@
 require_once 'MVC/Controllers/FinanceiroController.php';
 
 $financeiroController = new FinanceiroController();
-$vendas = $financeiroController->listarVendas();
+$vendas = $financeiroController->listarFinanceiros(); // Alterado para listarFinanceiros()
 ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Lista Financeira</title>
-    <link rel="stylesheet" href="style.css"> <!-- Altere o caminho conforme necessário -->
+    <title>Relatório Financeiro</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <h2>Lista Financeira</h2>
+    <h2>Relatório Financeiro</h2>
     <table border="1">
-        <tr>
-            <th>ID</th>
-            <th>Nome do Cliente</th>
-            <th>CPF do Cliente</th>
-            <th>Valor Total</th>
-            <th>Data da Venda</th>
-        </tr>
+        <tr><th>ID</th><th>Nome do Cliente</th><th>CPF</th><th>Valor Total</th><th>Data da Venda</th></tr>
         <?php foreach ($vendas as $venda): ?>
             <tr>
                 <td><?= $venda['id'] ?></td>
@@ -32,6 +26,6 @@ $vendas = $financeiroController->listarVendas();
             </tr>
         <?php endforeach; ?>
     </table>
-    <a href="listagens.php">Voltar</a>
+    <a href="../index.php">Voltar</a>
 </body>
 </html>

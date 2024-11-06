@@ -13,7 +13,7 @@
 
     <a href="estoque.php"><button>Cadastrar estoque</button></a>
 
-    <a href="financeiro.php"><button>Cadastrar estoque</button></a>
+    <a href="financeiro.php"><button>Cadastrar financiero</button></a>
 
     <!-- Botão para cadastrar fornecedores -->
     <a href="fornecedores.php"><button>Cadastrar Fornecedor</button></a>

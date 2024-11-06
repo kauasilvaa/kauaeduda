@@ -10,7 +10,6 @@ class Cliente {
         $this->conn = $database->getConnection();
     }
 
-
     public function criarCliente($nome, $cpf, $data_nascimento)
     {
         $sql = "INSERT INTO clientes (nome, cpf, data_nascimento) VALUES (?, ?, ?)";
@@ -20,10 +19,11 @@ class Cliente {
         return $stmt->rowCount();
     }
 
-    public function listarClientes()
+    public function listarTodos()
     {
-        $sql = "SELECT * FROM clientes";
-        $stmt = $this->conn->query($sql);
+        $sql = "SELECT * FROM " . $this->table_name;
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
@@ -44,11 +44,5 @@ class Cliente {
 
         return $stmt->rowCount();
     }
-
-    public function listarTodos() {
-        $query = "SELECT * FROM " . $this->table_name;
-        $stmt = $this->conn->prepare($query);
-        $stmt->execute();
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
-    }
 }
+?>

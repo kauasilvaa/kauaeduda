@@ -1,3 +1,20 @@
+<?php
+require_once 'MVC/Controllers/ClienteController.php';
+
+$clienteController = new ClienteController();
+
+// Processa o formulário de cadastro
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $nome = $_POST['nome'];
+    $cpf = $_POST['cpf'];
+    $data_nascimento = $_POST['data_nascimento'];
+
+    // Chama a função para criar o cliente
+    $clienteController->criarCliente($nome, $cpf, $data_nascimento);
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

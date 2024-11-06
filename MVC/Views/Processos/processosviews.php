@@ -22,7 +22,7 @@ $processos = $processoController->listarProcessos();
                 <td><?= htmlspecialchars($processo['data_inicio']) ?></td>
                 <td><?= htmlspecialchars($processo['quantidade']) ?></td>
                 <td><?= htmlspecialchars($processo['status']) ?></td>
-                <td><?= htmlspecialchars($processo['localizacao_atual']) ?></td>
+                <td><?= htmlspecialchars($processo['localizacao']) ?></td>
             </tr>
         <?php endforeach; ?>
     </table>

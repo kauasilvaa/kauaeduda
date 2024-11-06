@@ -1,6 +1,8 @@
 <?php
 require_once 'MVC/Controllers/FornecedorController.php';
+require_once 'MVC/Models/Fornecedormodels.php';
 
+$fornecedorModel = new Fornecedor();
 $fornecedorController = new FornecedorController($fornecedorModel);
 $fornecedores = $fornecedorController->listarFornecedores();
 ?>

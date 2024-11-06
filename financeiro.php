@@ -1,3 +1,17 @@
+<?php
+require_once 'MVC/Controllers/FinanceiroController.php';
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $nome_cliente = $_POST['nome_cliente'];
+    $cpf_cliente = $_POST['cpf_cliente'];
+    $valor_total = $_POST['valor_total'];
+    $data_venda = $_POST['data_venda'];
+
+    $controller = new FinanceiroController();
+    $controller->criarFinanceiro($nome_cliente, $cpf_cliente, $valor_total, $data_venda);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

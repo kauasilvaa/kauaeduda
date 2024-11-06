@@ -25,7 +25,7 @@ $produtos = $estoqueController->listarProdutos();
         <?php foreach ($produtos as $produto): ?>
             <tr>
                 <td><?= $produto['id'] ?></td>
-                <td><?= htmlspecialchars($produto['nome']) ?></td>
+                <td><?= htmlspecialchars($produto['nome_produto']) ?></td>
                 <td><?= htmlspecialchars($produto['categoria']) ?></td>
                 <td><?= htmlspecialchars($produto['data_entrada']) ?></td>
                 <td><?= htmlspecialchars($produto['data_saida']) ?></td>
