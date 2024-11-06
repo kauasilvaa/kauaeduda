@@ -9,6 +9,39 @@ class Fornecedor {
         $database = new Database();
         $this->conn = $database->getConnection();
     }
+    public function criarFornecedor($nome, $telefone, $email, $cnpj)
+    {
+        $sql = "INSERT INTO fornecedores (nome, telefone, email, cnpj) VALUES (?, ?, ?, ?)";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute([$nome, $telefone, $email, $cnpj]);
+
+        return $stmt->rowCount();
+    }
+
+    public function listarFornecedores()
+    {
+        $sql = "SELECT * FROM fornecedores";
+        $stmt = $this->conn->query($sql);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function atualizarFornecedor($id, $nome, $telefone, $email, $cnpj)
+    {
+        $sql = "UPDATE fornecedores SET nome = ?, telefone = ?, email = ?, cnpj = ? WHERE id = ?";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute([$nome, $telefone, $email, $cnpj, $id]);
+
+        return $stmt->rowCount();
+    }
+
+    public function deletarFornecedor($id)
+    {
+        $sql = "DELETE FROM fornecedores WHERE id = ?";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute([$id]);
+
+        return $stmt->rowCount();
+    }
 
     public function listarTodos() {
         $query = "SELECT * FROM " . $this->table_name;

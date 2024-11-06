@@ -2,7 +2,7 @@
 require_once '../../Controllers/FinanceiroController.php';
 
 $financeiroController = new FinanceiroController();
-$vendas = $financeiroController->listarVendas();
+$vendas = $financeiroController->listarFinanceiros();
 ?>
 
 <!DOCTYPE html>
