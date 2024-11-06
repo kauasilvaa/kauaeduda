@@ -24,22 +24,22 @@
     </div>
 
     <div id="clientes" class="content">
-        <?php include 'clientes.php'; ?>
+        <?php include 'Clientes/clientesviews.php'; ?>
     </div>
     <div id="fornecedores" class="content">
-        <?php include 'fornecedores.php'; ?>
+        <?php include 'Fornecedores/fornecedores.php'; ?>
     </div>
     <div id="estoque" class="content">
-        <?php include 'estoque.php'; ?>
+        <?php include 'Estoque/estoque.php'; ?>
     </div>
     <div id="funcionarios" class="content">
-        <?php include 'funcionarios.php'; ?>
+        <?php include 'Funcionarios/funcionarios.php'; ?>
     </div>
     <div id="financeiro" class="content">
-        <?php include 'financeiro.php'; ?>
+        <?php include 'Financeiro/financeiro.php'; ?>
     </div>
     <div id="processos" class="content">
-        <?php include 'processos.php'; ?>
+        <?php include 'Processos/processos.php'; ?>
     </div>
 </div>
 

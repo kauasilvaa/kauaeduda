@@ -1,5 +1,5 @@
 <?php
-require_once '../Controllers/FinanceiroController.php';
+require_once '../../Controllers/FinanceiroController.php';
 
 $financeiroController = new FinanceiroController();
 $vendas = $financeiroController->listarVendas();

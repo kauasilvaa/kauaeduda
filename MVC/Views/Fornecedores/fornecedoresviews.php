@@ -1,5 +1,5 @@
 <?php
-require_once '../Controllers/FornecedorController.php';
+require_once '../../Controllers/FornecedorController.php';
 
 $fornecedorController = new FornecedorController();
 $fornecedores = $fornecedorController->listarFornecedores();

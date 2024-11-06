@@ -1,5 +1,5 @@
 <?php
-require_once '../Controllers/FuncionarioController.php';
+require_once '../../Controllers/FuncionarioController.php';
 
 $funcionarioController = new FuncionarioController();
 $funcionarios = $funcionarioController->listarFuncionarios();

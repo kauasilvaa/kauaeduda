@@ -1,9 +1,9 @@
 <?php
-require_once 'config/database.php';
+require_once '../../db.php';
 
-class Estoque {
+class Fornecedor {
     private $conn;
-    private $table_name = "estoque";
+    private $table_name = "fornecedores";
 
     public function __construct() {
         $database = new Database();
