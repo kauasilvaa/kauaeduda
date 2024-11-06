@@ -10,7 +10,7 @@ $clientes = $clienteController->listarClientes();
 <head>
     <meta charset="UTF-8">
     <title>Lista de Clientes</title>
-    <link rel="stylesheet" href="style.css"> <!-- Altere o caminho conforme necessário -->
+    <link rel="stylesheet" href="style.css"> <!-- Altere o caminho conforme necessárioo -->
 </head>
 <body>
     <h2>Lista de Clientes</h2>
