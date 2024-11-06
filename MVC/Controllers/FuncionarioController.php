@@ -1,5 +1,5 @@
 <?php
-require_once '../Models/Funcionario.php';
+require_once 'MVC/Models/Funcionariomodels.php';
 
 class FuncionarioController {
     private $funcionarioModel;
@@ -13,6 +13,6 @@ class FuncionarioController {
     }
 
     public function listarFuncionarios() {
-        return $this->funcionarioModel->listar();
+        return $this->funcionarioModel->listartodos();
     }
 }

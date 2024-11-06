@@ -1,5 +1,5 @@
 <?php
-require_once 'Controllers/ClienteController.php';
+require_once 'MVC/Controllers/ClienteController.php';
 
 $clienteController = new ClienteController();
 $clientes = $clienteController->listarClientes();

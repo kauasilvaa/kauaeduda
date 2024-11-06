@@ -1,5 +1,5 @@
 <?php
-require_once 'Controllers/ProcessoController.php';
+require_once 'MVC/Controllers/ProcessoController.php';
 
 $processoController = new ProcessoController();
 $processos = $processoController->listarProcessos();

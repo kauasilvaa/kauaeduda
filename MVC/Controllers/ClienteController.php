@@ -1,5 +1,5 @@
 <?php
-require_once 'Models/Cliente.php';
+require_once 'MVC/Models/Clientemodels.php';
 
 class ClienteController {
     private $clienteModel;

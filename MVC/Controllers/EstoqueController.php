@@ -1,5 +1,5 @@
 <?php
-require_once '../Models/Estoque.php';
+require_once 'MVC/Models/Estoquemodels.php';
 
 class EstoqueController {
     private $estoqueModel;
@@ -13,6 +13,6 @@ class EstoqueController {
     }
 
     public function listarProdutos() {
-        return $this->estoqueModel->listar();
+        return $this->estoqueModel->listartodos();
     }
 }

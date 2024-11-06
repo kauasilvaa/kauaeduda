@@ -1,5 +1,5 @@
 <?php
-require_once '../Models/Fornecedor.php';
+require_once 'MVC/Models/Fornecedormodels.php';
 
 class FornecedorController {
     private $fornecedorModel;
@@ -13,6 +13,6 @@ class FornecedorController {
     }
 
     public function listarFornecedores() {
-        return $this->fornecedorModel->listar();
+        return $this->fornecedorModel->listarTodos();
     }
 }

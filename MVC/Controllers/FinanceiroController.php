@@ -1,5 +1,5 @@
 <?php
-require_once '../Models/Financeiro.php';
+require_once 'MVC/Models/Financeiromodels.php';
 
 class FinanceiroController {
     private $financeiroModel;
@@ -13,6 +13,6 @@ class FinanceiroController {
     }
 
     public function listarVendas() {
-        return $this->financeiroModel->listar();
+        return $this->financeiroModel->listartodos();
     }
 }

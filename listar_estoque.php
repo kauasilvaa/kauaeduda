@@ -1,5 +1,5 @@
 <?php
-require_once 'Controllers/EstoqueController.php';
+require_once 'MVC/Controllers/EstoqueController.php';
 
 $estoqueController = new EstoqueController();
 $produtos = $estoqueController->listarProdutos();
